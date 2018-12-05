@@ -43,3 +43,11 @@ let alteredinfo5 = ''
  console.log(alteredinfo5);
 
  fs.writeFileSync('challenge5/info.txt', alteredinfo5)
+
+ //CHALLENGE 6
+ // Display all files that end with ".txt". Don't hard code the file names!
+
+ fs.readdir('challenge6', function(err, files) {
+     const txtFiles = files.filter(el => /\.txt$/.test(el))
+   console.log(txtFiles);
+ })
